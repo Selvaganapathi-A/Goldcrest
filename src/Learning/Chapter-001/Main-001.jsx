@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './Main-001.scss';
-
 import Car, { Ferrari, Lamborghini, Lexus } from './Section-001';
 
 import { Animal } from './Section-002';
@@ -11,6 +9,7 @@ import { Banker } from './Section-003';
 import { EventManager } from './Section-005';
 
 import { List } from './Section-004 List';
+
 const products = [
     {
         id: 1,

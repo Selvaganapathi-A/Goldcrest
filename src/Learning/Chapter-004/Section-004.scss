@@ -1,0 +1,23 @@
+#simple-signin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    input:user-valid {
+        border: green 2px solid;
+    }
+
+    input:user-invalid {
+        border: red 2px solid;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: span 2;
+    }
+
+    #ik {
+        background-color: hsl(210 100% 50%);
+        height: 3rem;
+    }
+}

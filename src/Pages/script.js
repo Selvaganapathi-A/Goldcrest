@@ -10,5 +10,4 @@ function main() {
     for (let [key, value] of Object.entries(product)) {
         console.log(key, value);
     }
-    console.log('');
 }

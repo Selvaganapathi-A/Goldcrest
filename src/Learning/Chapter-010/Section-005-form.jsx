@@ -3,7 +3,10 @@ import './Section-005.scss';
 export default function FormElements() {
     const handleformData = (e) => {
         e.preventDefault();
+
         const form = e.target;
+
+        console.log(form);
         const data = new FormData(form);
         console.log(...data);
     };
@@ -16,16 +19,112 @@ export default function FormElements() {
                     value="pandora-uy54dv8nb32c"
                 />
                 <fieldset>
-                    <legend>Other inputs </legend>
+                    <legend>Favourite Food</legend>
                     <div>
-                        <label htmlFor="checkbox">Checkbox</label>
+                        <label htmlFor="idli">Idli</label>
                         <input
                             type="checkbox"
-                            name="checkbox"
-                            id="checkbox"
-                            placeholder="checkbox"
+                            name="food"
+                            id="idli"
+                            value="idli"
                         />
                     </div>
+                    <div>
+                        <label htmlFor="dosa">Dosa</label>
+                        <input
+                            type="checkbox"
+                            name="food"
+                            id="dosa"
+                            value="dosa"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="burger">Burger</label>
+                        <input
+                            type="checkbox"
+                            name="food"
+                            id="burger"
+                            value="burger"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="pizza">Pizza</label>
+                        <input
+                            type="checkbox"
+                            name="food"
+                            id="pizza"
+                            value="pizza"
+                        />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Work Off Day</legend>
+                    <div>
+                        <label htmlFor="day-1">Sunday</label>
+                        <input
+                            type="radio"
+                            name="day-off"
+                            value="sunday"
+                            id="day-1"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="day-2">Monday</label>
+                        <input
+                            type="radio"
+                            name="day-off"
+                            value="monday"
+                            id="day-2"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="day-3">Tuesday</label>
+                        <input
+                            type="radio"
+                            name="day-off"
+                            value="tuesday"
+                            id="day-3"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="day-4">Wednesday</label>
+                        <input
+                            type="radio"
+                            name="day-off"
+                            value="wednesday"
+                            id="day-4"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="day-5">Thursday</label>
+                        <input
+                            type="radio"
+                            name="day-off"
+                            value="thursday"
+                            id="day-5"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="day-6">Friday</label>
+                        <input
+                            type="radio"
+                            name="day-off"
+                            value="friday"
+                            id="day-6"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="day-7">Saturday</label>
+                        <input
+                            type="radio"
+                            name="day-off"
+                            value="saturday"
+                            id="day-7"
+                        />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Other inputs </legend>
                     <div>
                         <label htmlFor="radio">Radio</label>
                         <input
@@ -198,6 +297,88 @@ export default function FormElements() {
                         />
                     </div>
                 </fieldset>
+                <fieldset>
+                    <legend>Simple Selection</legend>
+                    <label htmlFor="select-one">Favouite Cat</label>
+                    <select
+                        required={true}
+                        name="select-one"
+                        id="select-one"
+                        defaultValue="default"
+                    >
+                        <option
+                            label="select favourite breed"
+                            disabled
+                            // selected
+                            // hidden
+                            value="default"
+                        ></option>
+                        <option value="Maine Coon" label="Main Coon"></option>
+                        <option value="Persian" label="Persian"></option>
+                        <option value="Pagdol" label="Pagdol"></option>
+                        <option value="Siamese" label="Siamese"></option>
+                        <option
+                            value="Abyssianian"
+                            label="Abyssianian"
+                        ></option>
+                        <option value="Sphynx" label="Sphynx"></option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Simple Selection</legend>
+                    <label htmlFor="select-multiple">Favouite Cats</label>
+                    <select
+                        name="select-multiple"
+                        id="select-multiple"
+                        defaultValue={['default']}
+                        multiple
+                        required={true}
+                    >
+                        <option
+                            label="select favourite breed"
+                            disabled
+                            // selected
+                            // hidden
+                            value="default"
+                        ></option>
+                        <option value="Maine Coon" label="Main Coon"></option>
+                        <option value="Persian" label="Persian"></option>
+                        <option value="Pagdol" label="Pagdol"></option>
+                        <option value="Siamese" label="Siamese"></option>
+                        <option
+                            value="Abyssianian"
+                            label="Abyssianian"
+                        ></option>
+                        <option value="Sphynx" label="Sphynx"></option>
+                    </select>
+                </fieldset>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        flexFlow: 'row wrap',
+                        padding: '1rem 0',
+                    }}
+                >
+                    <label
+                        htmlFor="textarea"
+                        style={{
+                            width: '20%',
+                            alignContent: 'center',
+                        }}
+                    >
+                        User Input :
+                    </label>
+                    <textarea
+                        name="textarea"
+                        id="textarea"
+                        cols="60"
+                        rows="10"
+                        style={{
+                            width: 'auto',
+                        }}
+                    ></textarea>
+                </div>
                 <hr className="small" />
                 <fieldset className="buttons">
                     <legend> Buttons </legend>

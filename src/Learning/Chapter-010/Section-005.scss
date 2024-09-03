@@ -35,3 +35,14 @@ fieldset.buttons {
         writing-mode: vertical-lr;
     }
 }
+
+form {
+    accent-color: red;
+
+    :is(input, select, textarea):user-invalid {
+        outline: 1px red solid;
+    }
+    :is(input, select, textarea):user-valid {
+        outline: 1px blueviolet solid;
+    }
+}

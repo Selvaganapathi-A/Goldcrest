@@ -1,0 +1,21 @@
+#container {
+    --border_color: hsl(60 100% 50%);
+
+    &,
+    div {
+        border: 2px solid var(--border_color);
+        padding: 1rem 0.1rem 0.1rem 1rem;
+        border-radius: 0.5rem;
+
+        background-color: hsl(from var(--border_color) h s l / 0.1);
+    }
+
+    div {
+        margin: 1rem 0.1rem 0.1rem 1rem;
+    }
+
+    div.funcComp {
+        --border_color: hsl(0 100% 50%);
+        // background-color: hsl(300 100% 50% / 0.1);
+    }
+}
