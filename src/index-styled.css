@@ -33,3 +33,18 @@ hr.peacock {
 
     background-repeat: no-repeat;
 }
+
+hr.small {
+    --width: 50%;
+    --height: 2px;
+
+    --clr_1: hsl(0 100% 50%);
+    --clr_2: hsl(270 100% 50%);
+}
+
+.note {
+    font-family: monospace;
+    background-color: light-dark(hsl(0 0% 80%), hsl(0 0% 20%));
+    padding: 1rem;
+    border-radius: 0.5rem;
+}

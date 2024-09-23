@@ -1,0 +1,81 @@
+.loading {
+    width: 200;
+    height: 200;
+    background-color: red;
+    animation: color-change infinite alternate 10s;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: #00ff00;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+.tasks {
+    list-style-type: none;
+
+    li + li {
+        margin-top: 2rem;
+    }
+    .task {
+        .title {
+            text-align: left;
+            font-size: 1.6rem;
+            text-shadow: 1px 1px 2px cyan;
+        }
+
+        .description {
+            text-indent: 4ch;
+        }
+
+        *:empty {
+            display: none;
+        }
+    }
+}
+
+.getter {
+    border-radius: 0.6rem;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: center;
+
+    legend {
+        padding-inline: 0.4rem;
+    }
+
+    input[type='text'] {
+        width: 100%;
+        height: 3rem;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    textarea {
+        width: 100%;
+        height: 8rem;
+        resize: none;
+
+    }
+}
+
+.person-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-flow: row;
+    grid-auto-rows: 2rem;
+
+    .picture {
+        grid-column: span 2;
+        grid-row: span 3;
+
+    }
+}

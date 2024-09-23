@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -12,5 +12,36 @@
         <div id="root"></div>
         <script type="module" src="/src/main.jsx"></script>
         <noscript>Enable Javascript to view this Page.</noscript>
+
+        <div id="portal-midguard"></div>
     </body>
+
+    <style>
+        #portal-midguard:empty {
+            display: none;
+        }
+        #portal-midguard {
+            text-align: right;
+            font-style: italic;
+            background-image: linear-gradient(
+                to top in hsl,
+                hsl(15 100% 50% / 1),
+                transparent
+            );
+            padding: 1rem;
+
+            border: hsl(15 100% 50%) 1px solid;
+            border-radius: 0.5rem;
+
+            margin-block: 1rem;
+        }
+
+        #portal-midguard > p + p {
+            margin-top: 2rem;
+        }
+
+        #portal-midguard > p:nth-of-type(even) {
+            text-align: left;
+        }
+    </style>
 </html>

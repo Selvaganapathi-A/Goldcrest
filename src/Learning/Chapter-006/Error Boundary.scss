@@ -1,0 +1,15 @@
+.error {
+    color: red;
+}
+
+.title {
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 3px light-dark(black, white);
+}
+
+
+.error.message {
+    margin-inline: 2rem;
+    margin-block: 1rem;
+}

@@ -1,0 +1,26 @@
+.themed-component.dark {
+    --color: hsl(300 100% 50%);
+}
+.themed-component {
+
+    --color: red;
+    color: var(--color);
+    background-color: hsl(from var(--color) h calc(s * 2) 85%);
+
+    * {
+        font-weight: 800;
+        text-align: end;
+    }
+
+    div {
+        margin: 1rem;
+        padding: 1rem;
+
+        border: 1px solid var(--color);
+        border-radius: 0.5rem;
+    }
+}
+.themed-component.light {
+    --color: blue;
+
+}

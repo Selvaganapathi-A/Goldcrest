@@ -151,6 +151,7 @@ class Wizard extends React.Component {
                 <Event_Method_004 />
                 <Event_Method_005 />
                 {/* <Event_Method_002 /> */}
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae atque id tempore mollitia accusantium iure asperiores nam culpa quibusdam officiis. Repellat eligendi quaerat vitae eum ipsa exercitationem officiis quidem reiciendis! Quia, optio.</p>
             </>
         );
     }

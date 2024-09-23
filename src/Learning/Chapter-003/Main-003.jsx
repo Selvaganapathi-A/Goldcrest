@@ -8,6 +8,8 @@ import { DisplayForS4 } from './Section-004';
 
 import { DisplayForS5 } from './Section-005';
 
+import { DisplayForS6 } from './Section-006';
+
 export default function Main_003() {
     return (
         <>
@@ -25,9 +27,12 @@ export default function Main_003() {
             <h3>Section 4 - Conditional Rendering.</h3>
             <DisplayForS4 />
             <hr className="small" />
-            <h3>Section 4 - Styled Component.</h3>
+            <h3>Section 5 - Styled Component.</h3>
             <DisplayForS5 />
             <hr className="small" />
+            <h3>Section 6 - Portal to Alien World</h3>
+            <hr />
+            <DisplayForS6 />
         </>
     );
 }

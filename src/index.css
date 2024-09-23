@@ -90,10 +90,12 @@ ol {
 }
 
 button,
-input {
+input,
+textarea {
     padding: 0.2rem;
     margin: 0.2rem;
     vertical-align: middle;
+    
 }
 
 input:is([type='radio'], [type='checkbox']) {
@@ -131,12 +133,42 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-    border: none;
-    border-radius: 0.2rem;
+    border: 1px solid rebeccapurple;
+    border-radius: 0.3rem;
     padding: 0.3rem 0.4rem;
 
-    &:active {
-        background-color: white;
-        color: black;
+    --fg: hsl(0 0% 15%);
+    --bg: hsl(0 0% 85%);
+
+    --fg-active: hsl(0 0% 25%);
+    --bg-active: hsl(0 0% 90%);
+
+    color: light-dark(var(--fg), var(--bg));
+    background-color: light-dark(var(--bg), var(--fg));
+    box-shadow: 0 0 0.2rem 0.05rem rebeccapurple;
+
+    &:hover {
+        border: 1px solid orangered;
+        box-shadow: 0 0 0.5rem orangered;
     }
+
+    &:active {
+        color: light-dark(var(--fg-active), var(--bg-active));
+        background-color: light-dark(var(--bg-active), var(--fg-active));
+        border: 1px solid;
+        box-shadow: 0 0 0.5rem currentColor;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.component {
+    --clr: light-dark(hsl(0 0% 0% / 0.1), hsl(0 0% 100% / 0.1));
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--clr);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem 0.5rem 0.2rem light-dark(grey, black);
 }
